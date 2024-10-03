@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Votação {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int numberUsers = 0;
+        int qtdeVotosTaffe = 0;
+        int qtdeVotosRodrigo = 0;
+        int qtdeVotosLucas = 0;
+        int qtdeVotosAlessandro = 0;
+
+        System.out.println("Informe quantidade de pessoas que irão votar");
+        numberUsers = sc.nextInt();
+
+        for (int i = 0; i < numberUsers; i++) {
+            System.out.println("Informe o candidato");
+            System.out.println(" Taffe - 80");
+            System.out.println(" Rodrigo  - 70");
+            System.out.println("Lucas - 60");
+            System.out.println("Alessandro - 50");
+
+            int voto = sc.nextInt();
+
+            if (voto == 80) {
+                qtdeVotosTaffe++;
+            } else if (voto == 70) {
+                qtdeVotosRodrigo++;
+            } else if (voto == 60) {
+                qtdeVotosLucas++;
+            } else if (voto == 50) {
+                qtdeVotosAlessandro++;
+            } else if (voto != 0) {
+                System.out.println("Voto inválido. tente novamente.");
+            }
+
+
+        }
+
+        if (qtdeVotosTaffe > qtdeVotosRodrigo && qtdeVotosTaffe > qtdeVotosLucas && qtdeVotosTaffe > qtdeVotosAlessandro) {
+            System.out.printf("Taffe");
+        } else if (qtdeVotosRodrigo > qtdeVotosTaffe && qtdeVotosRodrigo > qtdeVotosLucas && qtdeVotosRodrigo > qtdeVotosAlessandro) {
+            System.out.printf("Rodrigo");
+        } else if (qtdeVotosLucas > qtdeVotosRodrigo && qtdeVotosLucas > qtdeVotosTaffe && qtdeVotosLucas > qtdeVotosAlessandro) {
+            System.out.printf("Lucas");
+        } else if (qtdeVotosAlessandro > qtdeVotosRodrigo && qtdeVotosAlessandro > qtdeVotosLucas && qtdeVotosAlessandro > qtdeVotosTaffe) {
+            System.out.printf("Alessandro");
+        }
+
+
+    }
+}
