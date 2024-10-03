@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Carros {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int quantCarros = 0;
+
+        System.out.println("Insira a quantidade de carros:");
+        quantCarros = sc.nextInt();
+
+        for (int i = 0; i <= 1; i++) {
+            System.out.println("Digite nota de 0 à 10:");
+
+            int nota = sc.nextInt();
+
+            if (nota >= 6) {
+                quantCarros++;
+                System.out.println("Nota boa");
+            } else if (nota < 6) {
+                quantCarros++;
+                System.out.println("Nota ruim");
+            }
+
+
+        }
+        
+        }
+    }
